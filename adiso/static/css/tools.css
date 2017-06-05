@@ -1,0 +1,133 @@
+
+.color_alternate a {
+    color: #5634d1;
+}
+
+a {
+    color: #28dde0;
+}
+a {
+    outline: 0;
+    text-decoration: none;
+    background-color: transparent;
+    transition-property: background-color, box-shadow, border, color, opacity, transform;
+    transition-duration: 0.3s;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+.w-counter-number, 
+.w-pricing-item-header, 
+.w-progbar.color_custom 
+.w-progbar-title, 
+.woocommerce .products .product .price, 
+.gform_wrapper .chosen-container-single .chosen-single {
+    color: #28dde0;
+}
+
+.color_alternate .block_title h1 {
+    color: #5634d1;
+}
+
+.controls_light_color .sand_icon {
+    background: #5634D1;
+    box-shadow: inset 0 0 0 2px #5634d1; 
+    box-shadow: inset 0 0 0 2px #5634D1;
+}
+
+.controls_light_color .portfolio_control_step_icon {
+    border-color: #5634d1;
+}
+
+.controls_light_color .portfolio_control_step.current .portfolio_control_step_icon {
+    background: #5634d1;
+}
+
+.big_text p {
+    line-height: 130%;
+}
+.vc_col-sm-12{
+    width: 100%;
+}
+.vc_col-sm-4{
+    width: 33.3333%;
+    min-height: 10px;
+}
+.vc_col-sm-3{
+    width: 25%;
+    min-height: 10px;
+}
+
+.d1.animate_start {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+.d2.animate_start {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.d3.animate_start {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.d4.animate_start {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+
+.l-main li {
+    position: relative;
+    line-height: 130%;
+    margin-bottom: 1em;
+}
+
+.l-main li::before {
+    font-size: 30px;
+    content: "•";
+    left: -0.6em;
+    line-height: 60%;
+    position: absolute;
+    top: 0px;
+    color: rgb(40, 221, 224);
+}
+body h1, 
+body h2, 
+body h3, 
+body h4, 
+body h5, 
+body h6 {
+    font-weight: 900;
+    font-family: Helvetica;
+    line-height: 140%;
+    margin: 0 0 1rem;
+    padding-top: 0;
+}
+
+
+p, ul, ol, dl {
+    margin: 0 0 1.5rem;
+}
+ul li, ol li {
+    margin: 0 0 0.5rem;
+}
+
+.l-main p {
+    line-height: 120%;
+    margin: 0 0 1rem;
+}
+
+.clearfix:after{ 
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+

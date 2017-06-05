@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" class="no-touch">
+<head>
+    <meta charset="UTF-8">
+    <title>Adison Partners</title>
+    <meta name="viewport" content="width = device-width, user-scalable = no, initial-scale = 1, minimum-scale = 1, maximum-scale = 1,minimal-ui">
+	
+	<meta name="full-screen" content="yes"> <!-- UC强制全屏 -->
+	<meta name="x5-fullscreen" content="true"> <!-- QQ强制全屏 -->	
+	<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 是否删除默认的苹果工具栏和菜单栏 -->	
+
+	<link href="img/x-icon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" /> 
+	<link href="img/x-icon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" /> 
+	<link href="img/x-icon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/tools.css" />
+	<link rel="stylesheet" type="text/css" href="font/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/media.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />	
+	
+
+	<script type="text/javascript" src="js/template-web.js"></script>	
+	<script type="text/javascript" src="js/TweenMax.js"></script>	
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/iscroll-probe.js"></script>	
+	
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>	
+	<script type="text/javascript" src="js/paging.js"></script>	
+
+	<style type="text/css">
+		
+	</style>
+</head>
+<body class="">	
+	
+	<div id="loadingPage" style="">
+		<img src="img/adison_partners_icon.png" alt="">
+	</div>
+	<div id="logo" class="logo">
+		<a href="javascript:;" id="logo_link" class="logo_link">
+			<img src="img/logo_color_476_180.jpg" alt="" />
+		</a>
+	</div>	
+	<!--菜单按钮-->
+	<div id="menu_link" class="menu_link">
+		<div class="menu_link_icon">
+			<div class="menu_link_icon_bar menu_link_icon_bar_1"></div>
+			<div class="menu_link_icon_bar menu_link_icon_bar_2"></div>
+			<div class="menu_link_icon_bar menu_link_icon_bar_3"></div>
+		</div>
+		<div class="menu_link_label">MENU</div>
+	</div>
+	<!--菜单-->
+	<div id="menu_block" class="menu_block" style="visibility: none; opacity: 0;display: none">
+		
+	</div>
+
+	<!--右侧轮播按钮区-->
+	<div id="slide_btn" class="slide_btn" style="display: none">
+		
+	</div>
+	<!--主视图区-->
+	<div id="l-main" class="l-main" style="">
+		<div class="ajax_content_container ">
+			
+		</div>	
+	</div>
+
+<script id="temp-home" type="text/html">
+	<section class="l-section width_full" id="home_slider_box" style="display: block"> 
+		<div class="l-section-h" style="">
+			<div class="g-position-r offset-setmargin-25 valign_middle ">
+				<div class="vc_col-sm-12">
+					<div class="vc_column-inner">								
+						<div class="home_slider" style="visibility: inherit; opacity: 1;">
+							<div class="home_slider_contentblock">
+								<!-- 左右按钮 -->
+								<div class="home_slider_nav">
+									<div class="home_slider_nav_button home_slider_nav_left">
+										<i class="icon icon-angle-left"></i>
+									</div>
+									<div class="home_slider_nav_button home_slider_nav_right">
+										<i class="icon icon-angle-right"></i>
+									</div>
+								</div>
+								<!-- 视图的文字说明 -->
+								<div class="home_slides" id="home_slides">
+									<%for(var i = 0; i < tempData.length; i++){%>										
+										<div class="home_slide home_slide<%= i %>" id="home_slide<%= i %>" style="display: block; visibility: hidden; opacity: 0; z-index: 1;">
+											<div class="block_title_box ">
+												<a href="./<%= tempData[i].link %>/">
+													<div class="block_title">
+														<div class="lines line_lt">
+															<span style="width: 0%;"></span>
+														</div>
+														<div class="lines line_l">
+															<span style="height: 0%;"></span>
+														</div>
+														<div class="lines line_lb">
+															<span style="width: 0%;"></span>
+														</div>
+														<div class="lines line_rt">
+															<span style="width: 0%;"></span>
+														</div>
+														<div class="lines line_r">
+															<span style="height: 0%;"></span>
+														</div>
+														<div class="lines line_rb">
+															<span style="width: 0%;"></span>
+														</div>
+														<h1 style="opacity: 1;"><%= tempData[i].title %></h1>
+													</div>
+												</a>
+											</div>				
+											<div class="copy_block" style="opacity: 1;">
+												<div class="copy_block_h">
+													<div class="icon_holder">
+														<a href="./<%= tempData[i].link %>/" class="">
+															<div class="home_slider_plus_icon">
+																<span class="plus_icon">
+																	<span></span>
+																</span>
+															</div>
+														</a>
+													</div>
+													<div class="copy_holder">
+														<a href="./<%= tempData[i].link %>/">
+															<p><%= tempData[i].info %></p>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									<%}%>	
+								</div>
+								<!-- home 视图背景 -->
+								<div class="background_slides_box" style="">
+									<div class="background_slides">
+										<%for(var i = 0; i < tempData.length; i++){%>
+											<div id="background_slide_<%= i %>" class="background_slide" style="visibility: hidden; opacity: 0; z-index: <%= i===0?2:1 %>;">
+												<div class="background_slide_fragments_holder">
+													<div class="background_slide_fragment" style="top: 0%; left: 0%; width: 8.4%; background-position: 0px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 8.33333%; width: 8.4%; background-position: -100.267px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 16.6667%; width: 8.4%; background-position: -200.533px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 25%; width: 8.4%; background-position: -300.8px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 33.3333%; width: 8.4%; background-position: -401.067px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 41.6667%; width: 8.4%; background-position: -501.333px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 50%; width: 8.4%; background-position: -601.6px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 58.3333%; width: 8.4%; background-position: -701.867px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 66.6667%; width: 8.4%; background-position: -802.133px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 75%; width: 8.4%; background-position: -902.4px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 83.3333%; width: 8.4%; background-position: -1002.67px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+													<div class="background_slide_fragment" style="top: 0%; left: 91.6667%; width: 8.4%; background-position: -1102.93px 0px; background-image: url(<%= tempData[i].bgImg %>); visibility: visible; opacity:1; background-size: 1600px;">
+														
+													</div> 
+												</div>
+											</div>
+										<%}%>	
+									</div>
+								</div>
+								<!-- 右下角链接 -->
+								<div class="social_icons">
+									<div class="social_icon">
+										<a href="javascript:;" target="_blank">
+											<i class="icon icon-twitter"></i>
+										</a>
+									</div>
+									<div class="social_icon">
+										<a href="javascript:;" target="_blank">
+											<i class="icon icon-linkedin"></i>
+										</a>
+									</div>
+									<div class="social_icon">
+										<a href="javascript:;" target="_blank">
+											<i class="icon icon-envelope"></i>
+										</a>
+									</div>													
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</script>
+<script id="temp-menu" type="text/html">
+	<section  class="l-section width_full_p0_h100  valign_center " style="">
+		<div class="bg_slices">
+			<div class="bg_slices_h" style="">
+				<div class="bg_slice bg_slice_0" style="width: 8.4%; left: 0%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_1" style="width: 8.4%; left: 8.33333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_2" style="width: 8.4%; left: 16.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_3" style="width: 8.4%; left: 25%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_4" style="width: 8.4%; left: 33.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_5" style="width: 8.4%; left: 41.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_6" style="width: 8.4%; left: 50%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_7" style="width: 8.4%; left: 58.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_8" style="width: 8.4%; left: 66.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_9" style="width: 8.4%; left: 75%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_10" style="width: 8.4%; left: 83.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_11" style="width: 8.4%; left: 91.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+			</div>
+		</div>
+		<div class="l-section-h">
+			<div class="g-position-r offset-setmargin-25 valign_middle">
+				<div class="vc_col-sm-12 ">
+					<div class="vc_column-inner">
+						<div class="main_nav">
+							<ul class="main_nav_list">
+								<%for(var i=0;i<tempData.length;i++){%>
+									<li class="menu-item block_title.menu_block_lines" data-name="<%= tempData[i].name %>">
+										<a href="./<%= tempData[i].name %>/">
+											<span class="block_title menu_block_lines">
+												<div class="lines line_lt">
+													<span style="width: 100%;"></span>
+												</div>
+												<div class="lines line_l">
+													<span style="height: 100%;"></span>
+												</div>
+												<div class="lines line_lb">
+													<span style="width: 100%;"></span>
+												</div>
+												<div class="lines line_rt">
+													<span style="width: 100%;"></span>
+												</div>
+												<div class="lines line_r">
+													<span style="height: 100%;"></span>
+												</div>
+												<div class="lines line_rb">
+													<span style="width: 100%;"></span>
+												</div>
+												<span class="mainmenu-nav-label" style="opacity: 1;"><%= tempData[i].title%></span>
+											</span>
+										</a>
+									</li>
+								<%}%>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+</script>
+<script id="temp-contact" type="text/html">
+	<section class="l-section width_full color_alternate contact"  style="display: block;overflow: hidden;">
+		<%if(tempData[0].imgInfo){%>
+			<div class="bio_image" style="background-image: url(<%= tempData[0].imgInfo %>); visibility: inherit; opacity: 1; top: 0px;display:block;"></div>
+		<% } else { %>
+			<div class="bio_image" style="background-image: url('222'); visibility: inherit; opacity: 1; top: 0px;display:none"></div>
+		<%}%>		 	
+		<div class="bg_slices" style="background-color: #461897">
+			<div class="bg_slices_h" style="">
+				<div class="bg_slice bg_slice_0" style="width: 8.4%; left: 0%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_1" style="width: 8.4%; left: 8.33333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_2" style="width: 8.4%; left: 16.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_3" style="width: 8.4%; left: 25%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_4" style="width: 8.4%; left: 33.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_5" style="width: 8.4%; left: 41.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_6" style="width: 8.4%; left: 50%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_7" style="width: 8.4%; left: 58.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_8" style="width: 8.4%; left: 66.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_9" style="width: 8.4%; left: 75%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_10" style="width: 8.4%; left: 83.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				<div class="bg_slice bg_slice_11" style="width: 8.4%; left: 91.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+			</div>
+		</div>
+		<div class="l-section-h text-color" style="">
+			<div class="g-position-r offset-setmargin-small valign_middle">
+				<div class="vc_col-sm-12 wpb_column vc_column_container">
+					<div class="vc_column-inner">							  
+						<div class="block_title_box ">
+							<div class="block_title">
+								<div class="lines line_lt">
+									<span style="width: 100%;"></span>
+								</div>
+								<div class="lines line_l">
+									<span style="height: 100%;"></span>
+								</div>
+								<div class="lines line_lb">
+									<span style="width: 100%;"></span>
+								</div>
+								<div class="lines line_rt">
+									<span style="width: 100%;"></span>
+								</div>
+								<div class="lines line_r">
+									<span style="height: 100%;"></span>
+								</div>
+								<div class="lines line_rb">
+									<span style="width: 100%;"></span>
+								</div>
+								<h1 style="opacity: 1;"><%= tempData[0].name %></h1>
+							</div>
+						</div>
+						<div class="g-position-r wpb_row offset-setmargin-small vc_inner clearfix">							
+							<%for(var i=0;i<tempData[0].childs.length;i++){%>
+								<%if(tempData[0].childs[i].contact){%>
+									<div class="vc_col-sm-4 wpb_column vc_column_container animate_afb d2 animate_start">
+										<div class="vc_column-inner">
+											<div class="wpb_text_column ">
+												<div class="wpb_wrapper">
+													<h3>
+														<%= tempData[0].childs[i].title %>
+													</h3>													
+												</div>
+												<div class="my-infor">
+													<%for(var j=0;j<tempData[0].childs[i].contact.length;j++){%>
+														<div class="my-infor-item">
+															<span>
+																<%= tempData[0].childs[i].contact[j].info %>
+															</span>
+															<%if(tempData[0].childs[i].contact[j].text){%>
+																<%= tempData[0].childs[i].contact[j].text %>															
+															<%}%>
+															<%if(tempData[0].childs[i].contact[j].link){%>
+																<a href="<%= tempData[0].childs[i].contact[j].link %>" target="_blank">
+																	<%= tempData[0].childs[i].contact[j].link %>		
+																</a>																													
+															<%}%>
+														</div>
+													<%}%>													
+												</div>
+											</div>
+										</div>
+									</div>								
+								<% } else if(tempData[0].childs[i].Media){ %>
+									<div class="vc_col-sm-4 wpb_column vc_column_container animate_afb d3 animate_start">
+										<div class="vc_column-inner">
+											<div class="wpb_text_column ">
+												<div class="wpb_wrapper">
+													<h3>
+														<%= tempData[0].childs[i].title %>
+													</h3>	
+												</div>
+											</div>
+											<div class="link-info" style="font-size: 20px;">
+												<div class="link-info-list">
+													<%for(var j=0;j<tempData[0].childs[i].Media.length;j++){%>
+														<div class="socials-item ">
+															<a class="socials-item-link " target="_blank" href="javascript:;">
+																<span class="socials-item-link-hover <%= tempData[0].childs[i].Media[j].info %>	"></span>
+															</a>
+															<div class="socials-item-popup">
+																<span>
+																	<%= tempData[0].childs[i].Media[j].text %>	
+																</span>
+															</div>
+														</div>
+													<%}%>
+
+												</div>
+											</div>
+										</div>
+									</div> 
+								<% } else {%>
+									<div class="vc_col-sm-4 wpb_column vc_column_container animate_afb d<%= i+1 %> animate_start">
+										<div class="vc_column-inner">
+											<div class="w-image  bio_image_ref bio_image_ready">
+												<img src="<%= tempData[0].imgInfo %>" style="width:100%;">
+											</div> 
+										</div>
+									</div>
+								<%}%>		
+							<%}%>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</script>
+<script id="temp-page" type="text/html">
+	<%for(var i=0;i<tempData.length;i++){%>
+		<section  class="l-section width-full details-info page <%if(!tempData[i].imgInfo){%> <%= i%2?'color_alternate':'' %> <% } else { %> <%= 'color_alternate' %><%}%>" style="display: block;">
+			<%if(tempData[i].imgInfo){%>
+				<div class="bio_image" style="background-image: url(<%= tempData[i].imgInfo%>); visibility: inherit; opacity: 1; top: 0px;display:block;"></div>
+			<% } else { %>
+				<div class="bio_image" style="background-image: url(''); visibility: inherit; opacity: 1; top: 0px;display:none"></div>
+			<%}%>			 	
+			<div class="bg_slices" style="background: <%if(!tempData[i].imgInfo){%> <%= i%2?'#461897':'#e1e1e1' %>  <% } else { %> <%= '#461897' %> <%}%>">
+				<div class="bg_slices_h" style="">
+					<div class="bg_slice bg_slice_0" style="width: 8.4%; left: 0%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_1" style="width: 8.4%; left: 8.33333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_2" style="width: 8.4%; left: 16.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_3" style="width: 8.4%; left: 25%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_4" style="width: 8.4%; left: 33.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_5" style="width: 8.4%; left: 41.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_6" style="width: 8.4%; left: 50%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_7" style="width: 8.4%; left: 58.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_8" style="width: 8.4%; left: 66.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_9" style="width: 8.4%; left: 75%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_10" style="width: 8.4%; left: 83.3333%; visibility: inherit; opacity: 1; top: 0%;"></div>
+					<div class="bg_slice bg_slice_11" style="width: 8.4%; left: 91.6667%; visibility: inherit; opacity: 1; top: 0%;"></div>
+				</div>
+			</div>
+			<div class="l-section-h text-color" style="padding-top: 146.5px;">
+				<div class="g-position-r offset-setmargin-25 valign_middle clearfix">
+					<div class="vc_col-sm-12 wpb_column vc_column_container">
+						<div class="vc_column-inner">
+							<div class="block_title_box ">
+								<div class="block_title">
+									<div class="lines line_lt">
+										<span style="width: 100%;"></span>
+									</div>
+									<div class="lines line_l">
+										<span style="height: 100%;"></span>
+									</div>
+									<div class="lines line_lb">
+										<span style="width: 100%;"></span>
+									</div>
+									<div class="lines line_rt">
+										<span style="width: 100%;"></span>
+									</div>
+									<div class="lines line_r">
+										<span style="height: 100%;"></span>
+									</div>
+									<div class="lines line_rb">
+										<span style="width: 100%;"></span>
+									</div>
+									<h1 style="opacity: 1;">
+										<%= tempData[i].name %>
+									</h1>
+								</div>
+							</div>
+							<div class="g-position-r offset-setmargin-25 vc_inner clearfix">
+								<%if(tempData[i].childs.length===1){%>
+									<div class="vc_col-sm-12 wpb_column vc_column_container animate_afb d1 animate_start">
+										<div class="vc_column-inner">
+											<div class="big_text">
+												<div class="wpb_wrapper">
+													<%for(var j=0;j<tempData[i].childs[0].length;j++){%>
+														<%if(tempData[i].childs[0][j].content){%>														
+															<p>
+																<%= tempData[i].childs[0][j].content %>
+															</p>
+														<%}%>														
+													<%}%>													
+												</div>
+											</div>
+										</div>
+									</div>
+								<% } else { %>
+									<%for(var j=0;j<tempData[i].childs.length;j++){%>
+										<%if(tempData[i].childs.length===4){%>
+											<div class="vc_col-sm-3 wpb_column vc_column_container animate_afb d<%= j+1 %> animate_start">
+										<% } else if (tempData[i].childs.length===3) { %>	
+											<div class="vc_col-sm-4 wpb_column vc_column_container animate_afb d<%= j+1 %> animate_start">
+										<% } else { %>	
+											<div class=" wpb_column vc_column_container animate_afb d<%= j+1 %> animate_start">
+										<%}%>											
+											
+											<%if(tempData[i].imgInfo && j===0){%>
+												<div class="vc_column-inner">
+													<div class="w-image  bio_image_ref bio_image_ready">
+														<img src="<%= tempData[i].imgInfo %>" style="width:100%">
+													</div>													
+												</div>
+											<% } else { %>	
+												<div class="vc_column-inner">												
+													<div class="wpb_text_column ">
+														<div class="wpb_wrapper">
+															<%for(var k=0;k<tempData[i].childs[j].length;k++){%>	
+																<%if(tempData[i].childs[j][k].content){%>
+																	<p>
+																		<%= tempData[i].childs[j][k].content %>
+																	</p>
+																<% } else if (tempData[i].childs[j][k].title) { %>	
+																	<h3>
+																		<%= tempData[i].childs[j][k].title %>
+																	</h3>
+																<% } else if (tempData[i].childs[j][k].list) { %>	
+																	<ul>
+																		<%for(var n=0;n<tempData[i].childs[j][k].list.length;n++){%>
+																			<li>
+																				<%= tempData[i].childs[j][k].list[n] %>
+																			</li>
+																		<%}%>		
+																	</ul>
+																<%}%>	
+															<%}%>	
+														</div>
+													</div>
+												</div>
+											<%}%>
+
+										</div>
+									<%}%>					
+								<%}%>							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<%}%>
+</script>
+<script id="temp-btns" type="text/html">
+	<div class="slide_btns">
+		<%for(var i=0;i<tempData.length;i++){%>
+			<div class="slide_btn_item <%= i==0?'slide_btn_item_current':'' %>">
+				<div class="slide_btn_item_icon"></div>
+				<div class="slide_btn_item_label">
+					<span>
+						<i>
+							<%= tempData[i].name %>
+						</i>
+					</span>
+				</div>
+			</div>				
+		<%}%>	
+	</div>
+</script>
+
+<script src="js/main.js"></script>
+</body>
+</html>

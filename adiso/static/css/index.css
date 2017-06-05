@@ -1,0 +1,336 @@
+/*load------------------------------------------------------------------*/
+#loadingPage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #4d1aa6;
+  z-index: 1000;
+}
+#loadingPage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  animation: ro 4s infinite ease-in-out;
+  -webkit-animation: ro 4s infinite ease-in-out;
+  transform-origin: center center 80px;
+  -webkit-transform-origin: center center 80px;
+}
+@-webkit-keyframes ro {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0);
+    -moz-transform: rotateX(0) rotateY(0);
+    -ms-transform: rotateX(0) rotateY(0);
+    -o-transform: rotateX(0) rotateY(0);
+    transform: rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
+    -moz-transform: rotateX(180deg) rotateY(180deg);
+    -ms-transform: rotateX(180deg) rotateY(180deg);
+    -o-transform: rotateX(180deg) rotateY(180deg);
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -o-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-moz-keyframes ro {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0);
+    -moz-transform: rotateX(0) rotateY(0);
+    -ms-transform: rotateX(0) rotateY(0);
+    -o-transform: rotateX(0) rotateY(0);
+    transform: rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
+    -moz-transform: rotateX(180deg) rotateY(180deg);
+    -ms-transform: rotateX(180deg) rotateY(180deg);
+    -o-transform: rotateX(180deg) rotateY(180deg);
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -o-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-ms-keyframes ro {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0);
+    -moz-transform: rotateX(0) rotateY(0);
+    -ms-transform: rotateX(0) rotateY(0);
+    -o-transform: rotateX(0) rotateY(0);
+    transform: rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
+    -moz-transform: rotateX(180deg) rotateY(180deg);
+    -ms-transform: rotateX(180deg) rotateY(180deg);
+    -o-transform: rotateX(180deg) rotateY(180deg);
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -o-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-o-keyframes ro {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0);
+    -moz-transform: rotateX(0) rotateY(0);
+    -ms-transform: rotateX(0) rotateY(0);
+    -o-transform: rotateX(0) rotateY(0);
+    transform: rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
+    -moz-transform: rotateX(180deg) rotateY(180deg);
+    -ms-transform: rotateX(180deg) rotateY(180deg);
+    -o-transform: rotateX(180deg) rotateY(180deg);
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -o-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@keyframes ro {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0);
+    -moz-transform: rotateX(0) rotateY(0);
+    -ms-transform: rotateX(0) rotateY(0);
+    -o-transform: rotateX(0) rotateY(0);
+    transform: rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg) rotateY(180deg);
+    -moz-transform: rotateX(180deg) rotateY(180deg);
+    -ms-transform: rotateX(180deg) rotateY(180deg);
+    -o-transform: rotateX(180deg) rotateY(180deg);
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+    -ms-transform: rotateX(360deg) rotateY(360deg);
+    -o-transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+/*logo------------------------------------------------------------------*/
+.logo {
+  position: fixed;
+  width: 30%;
+  max-width: 238px;
+  z-index: 200;
+  top: 30px;
+  left: 30px;
+}
+.logo .logo_link {
+  display: block;
+  line-height: 100%;
+  font-size: 0;
+  height: 90px;
+}
+.logo img {
+  border: 0;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+/*菜单按钮--------------------------------------------------------------------*/
+.menu_link {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  color: #fff;
+  z-index: 200;
+  cursor: pointer;
+  text-align: center;
+}
+.menu_link_icon {
+  width: 40px;
+  height: 40px;
+  background: #5634d1;
+  border-radius: 50%;
+  position: relative;
+  transition: all .3s;
+}
+.menu_link_icon_bar {
+  width: 56%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  margin-top: -1px;
+  margin-left: -28%;
+  left: 50%;
+  transition: all 0.3s;
+}
+.menu_link_icon_bar_1 {
+  top: 32%;
+}
+.menu_link_icon_bar_2 {
+  top: 50%;
+}
+.menu_link_icon_bar_3 {
+  top: 68%;
+}
+.menu_link_label {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 24px;
+  color: #5634d1;
+  font-weight: 600;
+  transition: all .3s;
+}
+body.menu_link_open .menu_link_icon {
+  background: #28dde0;
+  box-shadow: none;
+}
+body.menu_link_open .menu_link_icon_bar_1 {
+  transform: rotate(45deg);
+  top: 50%;
+}
+body.menu_link_open .menu_link_icon_bar_2 {
+  width: 0;
+  margin-left: 0%;
+  transform: rotate(90deg);
+}
+body.menu_link_open .menu_link_icon_bar_3 {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+body.color-alert .menu_link_label {
+  color: #fff;
+}
+body.color-alert .menu_link_label {
+  display: none;
+}
+body.color-alert .menu_link_icon {
+  background: #28dde0;
+  box-shadow: none;
+}
+body.color-alert .menu_link_label {
+  color: #fff;
+}
+/*菜单按钮完------------------------------------------------------------------------*/
+/*右侧轮播图按钮-------------------------------------------------------------*/
+.slide_btn {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  width: 35px;
+  z-index: 100;
+}
+.slide_btns {
+  display: block;
+}
+.slide_btn_item {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 12px;
+  position: relative;
+  -webkit-transition: top .3s;
+  transition: top .3s;
+  font-style: 0;
+  text-align: center;
+}
+.slide_btn_item_icon {
+  display: inline-block;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 2px solid #5634d1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-style: 0;
+}
+.slide_btn_item_label {
+  font-family: Helvetica;
+  position: absolute;
+  right: 35px;
+  top: 0;
+  color: #5634d1;
+  opacity: 0.5;
+  text-align: right;
+  width: 150px;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  border-color: #5634d1;
+}
+.slide_btn_item_current .slide_btn_item_icon {
+  background: #5634d1;
+}
+.color_alternate .slide_btn_item_current .slide_btn_item_icon {
+  background: #5634d1;
+}
+.color_alternate .slide_btn_item_label,
+.color_alternate .slide_btn_item_icon {
+  color: #5634d1;
+  border-color: #5634d1;
+}
+.slide_btn_item_label span {
+  display: inline-block;
+  width: 100%;
+  line-height: 35px;
+  text-align: right;
+}
+.slide_btn_item_label i {
+  display: inline-block;
+  width: 100%;
+  line-height: 15px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 13px;
+  cursor: pointer;
+}
+body.color-alert .slide_btn_item_current .slide_btn_item_icon {
+  border-color: #28dde0;
+}
+body.color-alert .slide_btn_item_icon {
+  border-color: #28dde0;
+}
+.slide_btn_item_current .slide_btn_item_label {
+  opacity: 1;
+}
+body.color-alert .slide_btn_item_label {
+  color: #28dde0;
+}
+body.color-alert .slide_btn_item_current .slide_btn_item_icon {
+  background: #28dde0;
+}
+/*右侧轮播完----*/
+.menu_block {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+}
