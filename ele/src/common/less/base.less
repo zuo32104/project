@@ -1,0 +1,50 @@
+body,html{
+    line-height: 1;
+    font-weight: 200;
+    font-family: 'PingFang SC','STHeitiSC-Light','Helvetica-Light',arial,sans-serif;
+}
+
+.clearfinx{
+    display: inline-block;
+    &:after{
+        display: block;
+        content: "";
+        height: 0;
+        line-height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+/* Retina 适配 */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 150/100),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .border-1px:after {
+        -webkit-transform: scaleY(0.7);
+        transform: scaleY(0.7);
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
+only screen and (min--moz-device-pixel-ratio: 2.0),
+only screen and (-o-min-device-pixel-ratio: 200/100),
+only screen and (min-device-pixel-ratio: 2.0) {
+    .border-1px:after {
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+    }
+}
+
+/* 三倍屏 适配 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+only screen and (min--moz-device-pixel-ratio: 2.5),
+only screen and (-o-min-device-pixel-ratio: 250/100),
+only screen and (min-device-pixel-ratio: 2.5) {
+    .border-1px:after {
+        -webkit-transform: scaleY(0.33333334);
+        transform: scaleY(0.33333334);
+    }
+}
