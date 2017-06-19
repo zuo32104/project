@@ -25,8 +25,7 @@
       }
     },
     computed: {
-	  starType() {
-	  	console.log(this.size,this.score)
+	  starType() {	  
 	  	return 'star-' + this.size
 	  },
       itemclasses() {

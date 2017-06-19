@@ -12,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Goods
+      redirect: '/goods' 
     },
     {
       path: '/ratings',

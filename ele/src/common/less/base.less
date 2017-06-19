@@ -22,7 +22,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 150/100),
 only screen and (min-device-pixel-ratio: 1.5) {
     .border-1px:after {
-        -webkit-transform: scaleY(0.7);
+        -ms-transform: scaleY(0.7);    
+        -webkit-transform:scaleY(0.7);
+        -o-transform: scaleY(0.7);     
+        -moz-transform:scaleY(0.7);
         transform: scaleY(0.7);
     }
 }
@@ -31,20 +34,26 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 2.0),
 only screen and (-o-min-device-pixel-ratio: 200/100),
 only screen and (min-device-pixel-ratio: 2.0) {
-    .border-1px:after {
-        -webkit-transform: scaleY(0.5);
+    .border-1px:after {        
+        -ms-transform: scaleY(0.5);    
+        -webkit-transform:scaleY(0.5);
+        -o-transform: scaleY(0.5);     
+        -moz-transform:scaleY(0.5);
         transform: scaleY(0.5);
     }
 }
 
 /* 三倍屏 适配 */
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2.5),
-only screen and (min--moz-device-pixel-ratio: 2.5),
-only screen and (-o-min-device-pixel-ratio: 250/100),
-only screen and (min-device-pixel-ratio: 2.5) {
-    .border-1px:after {
-        -webkit-transform: scaleY(0.33333334);
-        transform: scaleY(0.33333334);
+@media only screen and (-webkit-min-device-pixel-ratio: 3.0),
+only screen and (min--moz-device-pixel-ratio: 3.0),
+only screen and (-o-min-device-pixel-ratio: 300/100),
+only screen and (min-device-pixel-ratio: 3.0) {
+    .border-1px:after {        
+        -ms-transform: scaleY(0.3334);    
+        -webkit-transform:scaleY(0.3334);
+        -o-transform: scaleY(0.3334);     
+        -moz-transform:scaleY(0.3334);
+        transform: scaleY(0.3334);
     }
 }
