@@ -1,5 +1,5 @@
 <template>
-  <div class="goods">
+  <div class="goods">      
     <div class="menu-wrapper" ref="menu-wrapper">
       <ul>
         <li 
@@ -42,11 +42,13 @@
         </li>
       </ul>
     </div>
+    <v-shopcart :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></v-shopcart> 
   </div>
 </template>
 
 <script type="text/javascript">
   import BScroll from 'better-scroll'
+  import shopcart from '@/components/shopcart/shopcart.vue'
 
   const ERR_OK = 0
   export default {
@@ -119,6 +121,9 @@
         }       
       }
 
+    },
+    components: {    
+      'v-shopcart':shopcart
     }
   }
 </script>

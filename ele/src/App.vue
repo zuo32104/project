@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <v-Header :seller="seller"></v-Header>
+    <v-Header :seller="seller"></v-Header>   
     <div class="tab border-1px">
       <div class="tab-item">
         <router-link :to="{path:'/goods'}">商品</router-link>
@@ -11,13 +11,14 @@
       <div class="tab-item">
         <router-link :to="{path:'/seller'}">商家</router-link>
       </div>
-    </div>
-    <router-view></router-view>
+    </div>    
+    <router-view :seller="seller"></router-view>
   </div>
 </template>
 
 <script>
 import Header from '@/components/header/header.vue'
+
 const ERR_OK = 0
 
 export default {
@@ -30,12 +31,12 @@ export default {
   created () {
     this.$http.get('/api/seller').then((response) => {
       if (response.body.errno === ERR_OK) {
-        this.seller = response.body.data
+        this.seller = response.body.data              
       }
     })
   },
   components: {
-    'v-Header': Header
+    'v-Header': Header    
   }
 }
 </script>
@@ -46,10 +47,11 @@ export default {
     display: flex;
     width: 100%;
     height: 40px;
-    line-height: 40px;
-    position: relative;   
-    box-sizing: border-box;    
-    .border-1px (rgba(7,17,27,0.1));     
+    line-height: 40px;  
+    box-sizing: border-box;  
+    position: relative;
+    z-index: 10;     
+    .border-1px (#e6e7e8);     
     .tab-item{
       flex: 1;
       text-align: center;
